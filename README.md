@@ -6,7 +6,7 @@ Super small framework for super easy responsive sites.
 Add script above `</body>` tag
 
 ```
-https://cdn.jsdelivr.net/gh/WindfallInc/Maui/maui.min.js
+<script src="https://cdn.jsdelivr.net/gh/WindfallInc/Maui/maui.min.js"></script>
 ``` 
  
 Start using custom attributes
