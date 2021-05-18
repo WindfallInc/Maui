@@ -3,7 +3,7 @@ Super small framework for super easy responsive sites.
 
 ## Using Maui
 
-Add script above </body> tag
+Add script above `</body>` tag
 
 ```
 https://cdn.jsdelivr.net/gh/WindfallInc/Maui/maui.min.js
