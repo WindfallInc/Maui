@@ -2,6 +2,10 @@ const small   = window.matchMedia('(max-width: 767px)')
 const medium  = window.matchMedia('(min-width:767px) and (max-width: 1023px)')
 const large   = window.matchMedia('(min-width: 1023px)')
 
+function replace(string, replace, with_this) {
+  return string.replace(replace, with_this);
+}
+
 function clearClasses (e){
   var sms   = document.querySelectorAll('[small]');
   var meds  = document.querySelectorAll('[medium]');
@@ -34,57 +38,57 @@ function clearClasses (e){
 
 function swapClasses (e){
 
-  clearClasses();
-
   if (small.matches) {
-    var refs = document.querySelectorAll('[small]');
+    
+    // get all elements with x-class attribute
+    var allClasses = document.querySelectorAll('[x-class]');
 
-    refs.forEach(ref => {
-      var allClasses     = ref.getAttribute('all');
-      var smallClasses  = ref.getAttribute('small');
+    // loop through allClasses  
+    allClasses.forEach(all => {
+      // get x-class attribute as string
+      var classString = all.getAttribute('x-class');
+      // replace in string
+      var classes = replace( classString, 'sm:', '')
 
-      ref.removeAttribute("class");
+      // replace [class] with classes string
+      all.setAttribute('class', classes);
+    });
 
-      if (allClasses != null){
-          ref.classList += ' ' + allClasses;
-      }
-
-      ref.classList += ' ' + smallClasses;
-  	});
   }
 
   if (medium.matches) {
-    var refs = document.querySelectorAll('[medium]');
+    
+    // get all elements with x-class attribute
+    var allClasses = document.querySelectorAll('[x-class]');
 
-    refs.forEach(ref => {
-      var allClasses     = ref.getAttribute('all');
-      var mediumClasses  = ref.getAttribute('medium');
+    // loop through allClasses  
+    allClasses.forEach(all => {
+      // get x-class attribute as string
+      var classString = all.getAttribute('x-class');
+      // replace in string
+      var classes = replace( classString, 'md:', '')
 
-      ref.removeAttribute("class");
+      // replace [class] with classes string
+      all.setAttribute('class', classes);
+    });
 
-      if (allClasses != null){
-          ref.classList += ' ' + allClasses;
-      }
-
-      ref.classList += ' ' + mediumClasses;
-  	});
   }
 
   if (large.matches) {
-    var refs = document.querySelectorAll('[large]');
+    
+    // get all elements with x-class attribute
+    var allClasses = document.querySelectorAll('[x-class]');
 
-    refs.forEach(ref => {
-      var allClasses     = ref.getAttribute('all');
-      var largeClasses  = ref.getAttribute('large');
+    // loop through allClasses  
+    allClasses.forEach(all => {
+      // get x-class attribute as string
+      var classString = all.getAttribute('x-class');
+      // replace in string
+      var classes = replace( classString, 'lg:', '')
 
-      ref.removeAttribute("class");
-
-      if (allClasses != null){
-          ref.classList += ' ' + allClasses;
-      }
-
-      ref.classList += ' ' + largeClasses;
-  	});
+      // replace [class] with classes string
+      all.setAttribute('class', classes);
+    });
 
   }
 

@@ -9,8 +9,8 @@ Add script above `</body>` tag
 <script src="https://cdn.jsdelivr.net/gh/WindfallInc/Maui/maui.min.js"></script>
 ``` 
  
-Start using custom attributes
+Start using custom modifiers - sm:, md: and lg:
 
 ``` 
-<h1 all="padding" small="blue" medium="red" large="orange" class="background-dark">Test</h1>
+<h1 x-class="padding sm:blue md:red lg:orange">Minke</h1>
 ```
