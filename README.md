@@ -12,5 +12,5 @@ Add script above `</body>` tag
 Start using custom modifiers - sm:, md: and lg:
 
 ``` 
-<h1 x-class="padding sm:blue md:red lg:orange">Minke</h1>
+<h1 x-class="padding sm:blue md:red lg:orange">Header</h1>
 ```
